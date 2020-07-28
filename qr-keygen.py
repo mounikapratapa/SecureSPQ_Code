@@ -5,22 +5,12 @@ start_time = time.time()
 # f() is the function to implement
 # The convention we'll use is that f(i)=0 denotes a quadratic residue
 # (1), and f(i)=1 denotes a non-residue (-1)
-f = [0] * 35 + [1] * 6
-a = 11
-b = 42
+f = [0] * 20 + [1] * 20
+beta = 11
+alpha = 42
 k = 41
 
-'''a = 151
-b = 168
-k = 100
-'''
-'''k =256 
-a=53
-b=378'''
-'''a = 31
-b = 1938
-k = 128'''
-sequence = [a + i * b for i in range(k)]
+sequence = [alpha * i + beta  for i in range(k)]
 
 
 # The power of an factor a in integer b
