@@ -37,5 +37,5 @@ def falsepos(y_actual, y_hat):
     return FP
 print(accuracy)
 print(falsepos (PtScores,EvalScores))
-
+print(precision)
                 
