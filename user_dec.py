@@ -14,14 +14,14 @@ sk =  p,q
 
 
 
-with open('C:/Users/mouni/OneDrive/Desktop/Research MESC/spq/g.txt', 'r') as file:
+with open('C:/Users/mouni/OneDrive/Desktop/spq/g.txt', 'r') as file:
         g = file.readlines()
         g = int(''.join(g))
 
-'''with open('C:/Users/mouni/OneDrive/Desktop/Research MESC/spq/sk.txt', 'r') as file:
+'''with open('C:/Users/mouni/OneDrive/Desktop/spq/sk.txt', 'r') as file:
         sk = file.readlines()'''
 EvalScores=[]
-with open('C:/Users/mouni/OneDrive/Desktop/Research MESC/spq/decrypt.txt', 'r') as file:
+with open('C:/Users/mouni/OneDrive/Desktop/spq/decrypt.txt', 'r') as file:
         for c in file:
             c = c.replace("[", "")
             c = c.replace("]", "")
