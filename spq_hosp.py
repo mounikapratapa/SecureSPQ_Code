@@ -1,9 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Jul  7 21:16:23 2020
 
-@author: mouni
-"""
 
 import time
 from Okamoto_Uchiyama import enc
