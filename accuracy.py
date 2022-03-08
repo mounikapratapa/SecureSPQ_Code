@@ -1,9 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sun Jul 26 12:25:57 2020
 
-@author: mouni
-"""
 
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import precision_score
