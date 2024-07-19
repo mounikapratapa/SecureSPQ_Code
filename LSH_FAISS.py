@@ -53,7 +53,7 @@ def generate_random_query(dimension):
 dataset_size = 2500  # Number of records
 dimension = 100  # Dimension of the vectors
 num_bits_list = [4, 8, 16, 32, 64, 128, 256, 512]  # Different number of hyperplanes (bits)
-num_tables = 1  # Number of hash tables (fixed for this experiment)
+num_tables = 1  # Number of hash tables (FAISS has mechanism to build tree anyway)
 threshold = 10.0  # Distance threshold
 k_percentages = [0.1, 0.5, 1, 5, 10, 20, 50, 100]  # Different percentages of total rows for k
 
