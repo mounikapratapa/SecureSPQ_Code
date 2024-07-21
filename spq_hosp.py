@@ -7,7 +7,7 @@ import numpy as np
 
 def spq_hospital():
     dfin = []
-    with open("C:/Users/mouni/OneDrive/Desktop/Research MESC/spq/result.txt","r") as res:
+    with open("result.txt","r") as res:
         for line in res:
             line = line.strip()
             line = line.split(",")
@@ -17,15 +17,15 @@ def spq_hospital():
         int_array = [int(x) for x in string]
         encr.append(int_array)
     print(encr)
-    with open('C:/Users/mouni/OneDrive/Deskto/spq/g.txt', 'r') as file:
+    with open('g.txt', 'r') as file:
         g = file.readlines()
         g = int(''.join(g))
         print(g)
-    with open('C:/Users/mouni/OneDrive/Desktop/spq/n.txt', 'r') as file:
+    with open('n.txt', 'r') as file:
         n = file.readlines()
         n = int(''.join(n))
         print(n)
-    with open("C:/Users/mouni/OneDrive/Desktop/spq/seq_100.txt","r") as f:
+    with open("seq.txt","r") as f:
         content = f.readlines()
         content = [x.strip() for x in content]
     #a = '0000000000'  
