@@ -1,9 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sun Jul 26 11:32:25 2020
 
-@author: mouni
-"""
 import numpy as np
 import time
 start = time.time()
@@ -12,7 +7,7 @@ disp = input("Enter your query sequence:")
 inp = [int(i) for i in disp]
 a = np.array(inp)
 
-with open("C:/Users/mouni/OneDrive/Desktop/Research MESC/spq/myOutFile2.txt","r") as f:
+with open("myOutFile.txt","r") as f:
         content = f.readlines()
         content = [x.strip() for x in content]
 Distance = []
