@@ -1,32 +1,56 @@
-
-
-from Okamoto_Uchiyama import enc,keys
 import time
-start = time.time()
-precomp = [[0,1,4],[1,0,1],[4,1,0]]
-def spq_encrypt(query,pk):
-        c = enc(pk,query)
-        return c
-def spq_user():
-    disp = str(input("Please enter your input query sequence:"))
-    pk, sk = keys(size)
-    n,g = pk
-    with open('g.txt', 'w') as f:
-        f.write("%s" %str(g))
-    with open('sk.txt', 'w') as f:
-        f.write("%s" %str(sk))
-    with open('n.txt', 'w') as f:
-        f.write("%s" %str(n))
-    df = [int(n) for n in disp]
-    print(df)
-    res =[]
-    for i in df:
-        data = [spq_encrypt(x,pk) for x in precomp[i]]
-        res.append(data)
-    print(res)
-    with open('result.txt', 'w') as f:
-        f.write("%s" %str(res))
-spq_user()
+from Okamoto_Uchiyama import enc
+import random
+import numpy as np
+
+def spq_hospital():
+    dfin = []
+    with open("enc_rec.txt","r") as res:
+        for line in res:
+            line = line.strip()
+            line = line.split(",")
+            dfin.append(line)
+    encr = []
+    for string in dfin:
+        int_array = [int(x) for x in string]
+        encr.append(int_array)
+    print(encr)
+    with open('g.txt', 'r') as file:
+        g = file.readlines()
+        g = int(''.join(g))
+        print(g)
+    with open('n.txt', 'r') as file:
+        n = file.readlines()
+        n = int(''.join(n))
+        print(n)
+    with open("enc_seq.txt","r") as f:
+        content = f.readlines()
+        content = [x.strip() for x in content]
+    #a = '0000000000'  
+    ED = []
+    for i in content:
+        df = [int(n) for n in i]
+        arr=[[]]
+        for j in range(len(df)):
+            data = encr[j][df[j]]
+            arr.append(data)
+            arr = [x for x in arr if x != []]
+        #print(arr)
+
+        pk = n,g
+        np.asarray(arr)
+        prod = (np.prod(arr)) 
+        #print("prod is:",prod)
+        alpha = 2
+        enc_beta = enc(pk,1)
+        c = pow(prod,alpha,n)
+        c = (c*enc_beta)%n
+        r = random.randint(1,n)
+        ct = pow(c,r**2,n)
+        ED.append(ct)
+    with open('decrypt.txt', 'w') as f:
+        f.write("%s" %str(ED))
+start = time.time()        
+spq_hospital()
 end = time.time()
-total = end - start
-print(total)    
+print(end-start)
