@@ -6,7 +6,7 @@ import sys
 sys.setrecursionlimit(10000)
 PtScores =[]
 EvalScores=[]
-with open('C:/Users/mouni/OneDrive/Desktop/Research MESC/spq/PlaintextED.txt', 'r') as file1:
+with open('PlaintextED.txt', 'r') as file1:
         for m in file1:
             print(m)
             m = m.replace("[", "")
@@ -14,7 +14,7 @@ with open('C:/Users/mouni/OneDrive/Desktop/Research MESC/spq/PlaintextED.txt', '
             for pt in m.strip().split(','):
                 pt = int(pt)
                 PtScores.append(pt)
-with open('C:/Users/mouni/OneDrive/Desktop/Research MESC/spq/evalres.txt', 'r') as file2:
+with open('evalres.txt', 'r') as file2:
         for c in file2:
             print(c)
             c = c.replace("[", "")
