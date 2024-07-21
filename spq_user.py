@@ -9,7 +9,7 @@ def spq_encrypt(query,pk):
         return c
 def spq_user():
     disp = str(input("Please enter your input query sequence:"))
-    pk, sk = keys(100)
+    pk, sk = keys(size)
     n,g = pk
     with open('g.txt', 'w') as f:
         f.write("%s" %str(g))
