@@ -1,5 +1,5 @@
 import time
-from Okamoto_Uchiyama import enc
+from Okamoto_Uchiyama import enc, modinv
 import random
 import numpy as np
 t = 0.80
@@ -40,7 +40,7 @@ def spq_user():
         pk = n,g
         np.asarray(arr)
         prod = (np.prod(arr)) 
-        prod = enc(t)*modinv(prod)
+        prod = enc(pk, t)*modinv(prod)
         alpha = 2
         enc_beta = enc(pk,1)
         c = pow(prod,alpha,n)
