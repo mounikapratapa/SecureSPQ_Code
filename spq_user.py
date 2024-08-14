@@ -3,7 +3,7 @@ from Okamoto_Uchiyama import enc
 import random
 import numpy as np
 
-def spq_hospital():
+def spq_user():
     dfin = []
     with open("enc_rec.txt","r") as res:
         for line in res:
@@ -51,6 +51,6 @@ def spq_hospital():
     with open('decrypt.txt', 'w') as f:
         f.write("%s" %str(ED))
 start = time.time()        
-spq_hospital()
+spq_user()
 end = time.time()
 print(end-start)
