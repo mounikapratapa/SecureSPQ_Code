@@ -2,7 +2,7 @@ import time
 from Okamoto_Uchiyama import enc
 import random
 import numpy as np
-
+t = 0.80
 def spq_user():
     dfin = []
     with open("enc_rec.txt","r") as res:
@@ -40,7 +40,7 @@ def spq_user():
         pk = n,g
         np.asarray(arr)
         prod = (np.prod(arr)) 
-        #print("prod is:",prod)
+        prod = enc(t)*modinv(prod)
         alpha = 2
         enc_beta = enc(pk,1)
         c = pow(prod,alpha,n)
