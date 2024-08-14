@@ -30,7 +30,7 @@ def spq_user():
     ED = []
     for i in content:
         df = [int(n) for n in i]
-        arr=[[]]
+        arr=[]
         for j in range(len(df)):
             data = encr[j][df[j]]
             arr.append(data)
