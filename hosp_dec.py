@@ -25,7 +25,6 @@ with open('decrypt.txt', 'r') as file:
                 es=kronecker(result,p)
                 
                 EvalScores.append(es)
-with open('evalres.txt', 'w') as f:
-        f.write("%s" %str(EvalScores))
+
 end = time.time()
 print(end-start)       
